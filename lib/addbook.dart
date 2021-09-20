@@ -25,6 +25,65 @@ class _AddBookState extends State<AddBook> {
         ),
         centerTitle: true,
       ),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              booknameText(context),
+              authorText(context),
+              priceText(context),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget priceText(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 10),
+      width: MediaQuery.of(context).size.width * 0.8,
+      child: TextField(
+        decoration: InputDecoration(
+          labelText: 'Price',
+          labelStyle: TextStyle(
+            fontFamily: 'Nunito',
+            fontSize: 16,
+          ),
+          suffixIcon: Icon(Icons.price_change_outlined)
+        ),
+      ),
+    );
+  }
+
+  Widget authorText(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 10),
+      width: MediaQuery.of(context).size.width * 0.8,
+      child: TextField(
+        decoration: InputDecoration(
+            labelText: 'Author Name',
+            labelStyle: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Nunito',
+            ),
+            suffixIcon: Icon(Icons.face_outlined)),
+      ),
+    );
+  }
+
+  Container booknameText(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.8,
+      child: TextField(
+        decoration: InputDecoration(
+            labelText: 'Book Name',
+            labelStyle: TextStyle(
+              fontFamily: 'Nunito',
+              fontSize: 16,
+            ),
+            suffixIcon: Icon(Icons.book_outlined)),
+      ),
     );
   }
 }
