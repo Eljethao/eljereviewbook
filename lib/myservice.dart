@@ -1,3 +1,4 @@
+import 'package:eljereviewbook/addbook.dart';
 import 'package:eljereviewbook/utility/signout_process.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -63,7 +64,10 @@ class _MyServiceState extends State<MyService> {
       ),
       title: Text('Add Book'),
       subtitle: Text('Add a new book here'),
-      onTap: () {},
+      onTap: () {
+        MaterialPageRoute route = MaterialPageRoute(builder: (context)=> AddBook());
+        Navigator.push(context, route);
+      },
     );
   }
 
