@@ -4,7 +4,7 @@ Future<void> normalDialog(BuildContext context, String message) async {
   showDialog(
     context: context,
     builder: (context) => SimpleDialog(
-      title: Text(message),
+      title: Text(message,style: TextStyle(fontFamily: 'Nunito'),),
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -15,7 +15,7 @@ Future<void> normalDialog(BuildContext context, String message) async {
               },
               child: Text(
                 'OK',
-                style: TextStyle(color: Colors.blue),
+                style: TextStyle(color: Colors.blue,fontFamily: 'Nunito'),
               ),
             )
           ],

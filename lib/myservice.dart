@@ -30,7 +30,11 @@ class _MyServiceState extends State<MyService> {
           ),
         ],
       ),
-      body: Text('This is myhome service'),
+      body: ListView(
+        children: [
+          
+        ],
+      ),
     );
   }
 
@@ -65,8 +69,9 @@ class _MyServiceState extends State<MyService> {
       title: Text('Add Book'),
       subtitle: Text('Add a new book here'),
       onTap: () {
+        Navigator.pop(context);
         MaterialPageRoute route = MaterialPageRoute(builder: (context)=> AddBook());
-        Navigator.push(context, route);
+        Navigator.push(context, route);     
       },
     );
   }
